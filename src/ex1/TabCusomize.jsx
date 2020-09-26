@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
         background: theme.palette.primary.main,
         color: theme.palette.primary.light,
         borderBottom: `2px solid ${theme.palette.secondary.main}`,      
-        fontSize: 10,
+        fontSize: 8,
         minHeight: 20,
     },
     spanStyle: {
@@ -25,7 +25,7 @@ const TabCustomize = () => {
 
     return(
         <div className={classes.divStyle}>
-            <Grid container>
+            <Grid container direction="row" alignItems="center">
                 <Grid item xs={3}>
                     <span className={classes.spanStyle}>FILTERS APPLIED: </span>
                 </Grid>
@@ -39,7 +39,6 @@ const TabCustomize = () => {
                     <InputSample />
                 </Grid>
             </Grid>
-            
         </div>
 
 

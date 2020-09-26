@@ -1,10 +1,7 @@
 import React from "react";
-import clsx from 'clsx';
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
 import ClearIcon from '@material-ui/icons/Clear';
-import {Grid} from '@material-ui/core';
 
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -16,10 +13,7 @@ const styles = theme => ({
     // flexWrap: "wrap",
     color: theme.palette.primary.light,
     border: `0.2px solid ${theme.palette.primary.light}`,
-    // width: '25%',
     margin: theme.spacing(1),
-    // height: '60%',
-    
   },
   textField: {
     // flexBasis: 150,

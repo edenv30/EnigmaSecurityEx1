@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -10,10 +10,9 @@ import {
     ValueAxis,
     LineSeries,
     AreaSeries,
-    Title,
   } from '@devexpress/dx-react-chart-material-ui';
-  import { ArgumentScale, ValueScale } from '@devexpress/dx-react-chart';
-  // import { scaleLog, scaleTime } from 'd3-scale';
+  import { ValueScale } from '@devexpress/dx-react-chart';
+  // import { scaleLog, scaleTime } from 'd3-scale'; ArgumentScale,
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -107,7 +106,7 @@ const Graph = () => {
                 <Grid item xs={12}>
                      <div className={classes.header}>
                         <span className={classes.spanText}>BTC-USD-CME</span>
-                        <Tabs ScrollButtonComponent 
+                        <Tabs  
                           value={value}
                           onChange={handleChange}
                           indicatorColor="primary"

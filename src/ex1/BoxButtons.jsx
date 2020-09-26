@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 const BoxButtons = () => {
 
     const classes = useStyles();
-    const icon = <TelegramIcon />;
+
     return(
         <div className={classes.root}>
             <Paper className={classes.paper}>
@@ -55,7 +55,7 @@ const BoxButtons = () => {
                         justify="center"
                         style={{ minHeight: '10vh', maxWidth: '100%' }}
                     >
-                        <Grid item xs={5} justify="flex-start" style={{ minHeight: '5vh', maxWidth: '30%', margin : 3 }}>
+                        <Grid item xs={5} style={{ minHeight: '5vh', maxWidth: '30%', margin : 3 }}>
                             <Button size="small" 
                                     style={{
                                         borderRadius: 5,
@@ -75,7 +75,7 @@ const BoxButtons = () => {
                         <Grid item xs={2} align="center">
                             <span style={{ fontSize: "10px", textAlign: "center", marginLeft: "4px" }}>18.5</span>
                         </Grid>
-                        <Grid item xs={5} justify="flex-end" style={{ minHeight: '5vh', maxWidth: '30%', margin : 3 }}>
+                        <Grid item xs={5} style={{ minHeight: '5vh', maxWidth: '30%', margin : 3 }}>
                             <Button size="small" 
                                     style={{
                                         borderRadius: 5,
@@ -94,13 +94,13 @@ const BoxButtons = () => {
                         </Grid>
                     </Grid>
                     <Grid item xs={4}>
-                        <InputField textField="1.25"/>
+                        <InputField textId="#field1" textField="1.25"/>
                     </Grid>
                     <Grid item xs={4}>
-                        <InputField textField="MKT"/>
+                        <InputField textId="field2" textField="MKT"/>
                     </Grid>
                     <Grid item xs={4}>
-                        <InputField textField="Slippage"/>
+                        <InputField textId="field3" textField="Slippage"/>
                     </Grid>
                 </Grid>
             </Paper>

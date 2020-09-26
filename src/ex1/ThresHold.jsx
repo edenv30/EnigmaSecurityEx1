@@ -5,24 +5,9 @@ import { withStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import Paper from '@material-ui/core/Paper';
 import { AutoSizer, Column, Table } from 'react-virtualized';
-import { makeStyles } from '@material-ui/core/styles';
 
 import { dataTableTwo } from './data/tableTwo';
 
-const useStyles = makeStyles((theme) => ({
-  divStyle: {
-      flexGrow: 1,
-      background: theme.palette.primary.main,
-      color: theme.palette.primary.light,
-      borderBottom: `2px solid ${theme.palette.secondary.main}`,      
-      fontSize: 10,
-      minHeight: 20,
-  },
-  spanStyle: {
-    // marginLeft: '0.8rem'
-    margin: '15px'
-  }
-}));
 
 const styles = (theme) => ({
     flexContainer: {
@@ -179,8 +164,6 @@ const styles = (theme) => ({
   }
 
   export default function TresHold() {
-
-    const classes = useStyles();
 
     const [rowsCollectData, setRowsCollectData] = useState([]);
     const [rows, setRows] = useState([]);

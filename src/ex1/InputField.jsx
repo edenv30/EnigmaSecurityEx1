@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-const InputField = ({textField }) => {
+const InputField = ({textField, textId }) => {
 
     const classes = useStyles();
 
@@ -28,7 +28,6 @@ const InputField = ({textField }) => {
         <div>
             <InputBase 
                 className={classes.inputBase}
-                id="outlined-basic"
                 placeholder={textField}
                 variant="outlined"
             />

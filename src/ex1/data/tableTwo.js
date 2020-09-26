@@ -33,7 +33,7 @@ export const dataTableTwo = [
         "lastCalLculationDate": "01/07/2020"
     },
     {
-        "counterParty": "Bitcoin Of America",
+        "counterParty": "Bitcoin",
         "btc": "0",
         "eth": "0",
         "xpr": "0",

@@ -95,6 +95,7 @@ export default function CustomizedTabs() {
         setID(c.text)
       if(c.label === 'CREATED')
         setCreated(c.text)
+      return c
   })
   },[])
 

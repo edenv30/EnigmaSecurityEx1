@@ -9,6 +9,8 @@ import { AutoSizer, Column, Table } from 'react-virtualized';
 import { dataTableOne } from './data/tableOne';
 import RadioButtonCheckedRoundedIcon from '@material-ui/icons/RadioButtonCheckedRounded';
 
+import Grid from '@material-ui/core/Grid';
+
 const styles = (theme) => ({
     flexContainer: {
       display: 'flex',
@@ -68,6 +70,13 @@ const styles = (theme) => ({
       });
     };
 
+    setRadioButton = (id, color, text) => {
+      return <Grid container direction="row" alignItems="center">
+              <RadioButtonCheckedRoundedIcon id={id} htmlColor={color} />
+              <label labelplacement="end" htmlFor={id} style={{color: `${color}` }}>{text}</label>
+          </Grid>
+    }
+
     cellRenderer = ({ cellData, columnIndex }) => {
       const { columns, classes, rowHeight, onRowClick } = this.props;
       return (
@@ -82,18 +91,12 @@ const styles = (theme) => ({
         >
           {(columnIndex === 3) ?
             (cellData) ? 
-              (
-                <div aria-label="position" row>
-                  <RadioButtonCheckedRoundedIcon id="radio-active" htmlColor={"rgb(41, 170, 41)"} />
-                  <label labelplacement="end" htmlFor="radio-active" style={{color: "rgb(41, 170, 41)" }}>Active</label>
-                </div>
+              ( 
+                this.setRadioButton("radio-active","rgb(41, 170, 41)", "Active")
               )
             : 
                 (
-                  <div aria-label="position" row>
-                    <RadioButtonCheckedRoundedIcon id="radio-canceled" htmlColor={"rgb(208, 41, 61)"} />
-                    <label htmlFor="radio-canceled" style={{color: "rgb(208, 41, 61)" }} labelplacement="end">Canceled</label>
-                  </div>
+                  this.setRadioButton("radio-canceled","rgb(208, 41, 61)", "Canceled")
                 )
             :
             cellData
@@ -204,7 +207,7 @@ const styles = (theme) => ({
     },[rowsCollectData]);
 
     return (
-      <Paper style={{ height: 350, width: '100%' }}>
+      <Paper style={{ height: 320, width: '100%' }}>
         <VirtualizedTable
           rowCount={rows.length}
           rowGetter={({ index }) => rows[index]}
