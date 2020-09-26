@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(2),
     },
   }));
-//   <Grid item xs={5} justify="center" style={{ minHeight: '5vh', maxWidth: '30%', margin : 3 }}>
 
 const BoxButtons = () => {
 

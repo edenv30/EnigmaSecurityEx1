@@ -9,12 +9,10 @@ import { dataTableThree } from './data/tableThree';
 
 const AntTabs = withStyles({
   root: {
-    // borderBottom: '1px solid red',
     zIndex: 1,
 
   },
   indicator: {
-    // backgroundColor: 'red',
     display: "flex",
     justifyContent: "center",
     borderColor: '1px solid red',
@@ -34,7 +32,6 @@ const AntTab = withStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     fontSize: 10,
     fontWeight: theme.typography.fontWeightRegular,
-    // marginRight: theme.spacing(1),
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -53,7 +50,6 @@ const AntTab = withStyles((theme) => ({
     },
     '&$selected': {
       color: theme.palette.common.white,
-      // fontWeight: theme.typography.fontWeightRegular,
     },
     '&:focus': {
       color: theme.palette.common.white,

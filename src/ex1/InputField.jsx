@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
       inputBase: {
         margin: 2,
         border: `1px solid ${theme.palette.primary.light}`,
-        // borderRadius: theme.shape.borderRadius,
         color: theme.palette.primary.light,
         height: "6vh",
         padding: theme.spacing(1),

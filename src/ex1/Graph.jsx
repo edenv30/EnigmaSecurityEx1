@@ -63,14 +63,7 @@ import {
     { argument: '15:30' , value: 11.640 },
     { argument: '15:45' , value: 11.690 },
     { argument: '16:00' , value: 11.700 },
-    
-
-    // { argument: '15:15' , value: 11.600 },
-    // { argument: '15:30' , value: 11.650 },
-    // { argument: '15:45' , value: 11.700 },
-    // { argument: '16:00' , value: 11.750 },
-
-    
+     
   ];
 
   // const data = [
@@ -90,15 +83,6 @@ const Graph = () => {
     const handleChange = (event, newValue) => {
         setValue(newValue);
       };
-    // const [dataChart, setDataChart] = useState([]);
-
-    // useEffect( () => {
-    //     for (let i = 0; i < 50; i += 1) {
-    //         const randomSelection = data[Math.floor(Math.random() * data.length)];
-    //         dataChart.push(randomSelection)
-    //       }
-    //       return setDataChart([...dataChart])
-    // },[]);
 
     return (
         <Paper className={classes.paper}>
