@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         margin: 2,
         border: `1px solid ${theme.palette.primary.light}`,
         color: theme.palette.primary.light,
-        height: "6vh",
+        height: "4vh",
         padding: theme.spacing(1),
         
         [theme.breakpoints.up('xs')]: {

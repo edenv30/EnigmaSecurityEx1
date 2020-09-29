@@ -66,7 +66,22 @@ const useStyles = makeStyles((theme) => ({
           justify: "center"
 
         },
-    }
+    },
+    underLine: {
+        padding: theme.spacing(1),
+        [theme.breakpoints.up('xs')]: {
+            direction: "column",
+            maxWidth: '50%', 
+        },
+        [theme.breakpoints.up('md')]: {
+            direction: "column",
+            maxWidth: '70%', 
+        },
+        [theme.breakpoints.up('lg')]: {
+            direction: "column",
+            maxWidth: '100%', 
+        },
+    },
    
   }));
 //   style={{ minHeight: '10vh', maxWidth: '100%' }}
@@ -127,13 +142,13 @@ const BoxButtons = () => {
                             </Button>
                         </Grid>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={4} className={classes.underLine}>
                         <InputField textId="#field1" textField="1.25"/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={4}  className={classes.underLine}>
                         <InputField textId="field2" textField="MKT"/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={4}  className={classes.underLine}>
                         <InputField textId="field3" textField="Slippage"/>
                     </Grid>
                 </Grid>
