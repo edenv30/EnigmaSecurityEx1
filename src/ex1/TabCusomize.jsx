@@ -11,12 +11,27 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.primary.light,
         borderBottom: `2px solid ${theme.palette.secondary.main}`,      
         fontSize: 8,
-        minHeight: 20,
+        // minHeight: 20,
     },
     spanStyle: {
       // marginLeft: '0.8rem'
-      margin: '15px'
-    }
+      margin: '15px',
+      [theme.breakpoints.up('xs')]: {
+        direction: "column",
+        justify: 'flex-start'
+    },
+    [theme.breakpoints.up('md')]: {
+        direction: "row",
+        justify: "center"
+    },
+    [theme.breakpoints.up('lg')]: {
+      direction: "row",
+      justify: "center"
+
+    },
+    },
+
+    
   }));
 
 const TabCustomize = () => {
@@ -24,7 +39,7 @@ const TabCustomize = () => {
     const classes = useStyles();
 
     return(
-        <div className={classes.divStyle}>
+        <Grid className={classes.divStyle}>
             <Grid container direction="row" alignItems="center">
                 <Grid item xs={3}>
                     <span className={classes.spanStyle}>FILTERS APPLIED: </span>
@@ -39,7 +54,7 @@ const TabCustomize = () => {
                     <InputSample />
                 </Grid>
             </Grid>
-        </div>
+        </Grid>
 
 
     )

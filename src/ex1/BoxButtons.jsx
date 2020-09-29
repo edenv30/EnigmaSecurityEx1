@@ -6,6 +6,7 @@ import SyncAltSharpIcon from '@material-ui/icons/SyncAltSharp';
 import InputField from './InputField';
 import Button from '@material-ui/core/Button';
 import TelegramIcon from '@material-ui/icons/Telegram';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +34,42 @@ const useStyles = makeStyles((theme) => ({
         // marginLeft: theme.spacing(0.5),
         marginBottom: theme.spacing(2),
     },
+    middleLine: {
+        padding: theme.spacing(1),
+        [theme.breakpoints.up('xs')]: {
+            minHeight: 5,
+            maxWidth: '50%', 
+            margin : 3,
+        },
+        [theme.breakpoints.up('md')]: {
+            minHeight: 5,
+            maxWidth: '40%', 
+            margin : 3,
+        },
+        [theme.breakpoints.up('lg')]: {
+            minHeight: 5,
+            maxWidth: '30%', 
+            margin : 3,
+        },
+    },
+    middleGrid: {
+        [theme.breakpoints.up('xs')]: {
+            direction: "column",
+            justify: 'flex-start'
+        },
+        [theme.breakpoints.up('md')]: {
+            direction: "row",
+            justify: "center"
+        },
+        [theme.breakpoints.up('lg')]: {
+          direction: "row",
+          justify: "center"
+
+        },
+    }
+   
   }));
+//   style={{ minHeight: '10vh', maxWidth: '100%' }}
 
 const BoxButtons = () => {
 
@@ -51,10 +87,9 @@ const BoxButtons = () => {
                     </Grid>
                     <Grid
                         container
-                        justify="center"
-                        style={{ minHeight: '10vh', maxWidth: '100%' }}
+                        className={classes.middleGrid}
                     >
-                        <Grid item xs={5} style={{ minHeight: '5vh', maxWidth: '30%', margin : 3 }}>
+                        <Grid item xs={5} className={classes.middleLine}>
                             <Button size="small" 
                                     style={{
                                         borderRadius: 5,
@@ -66,15 +101,15 @@ const BoxButtons = () => {
                                     variant="contained"
                             >
                                 <Grid container>
-                                        <Grid item xs={4}><TelegramIcon fontSize="inherit"/>  </Grid>
+                                        <Grid item xs={4}><TelegramIcon fontSize="inherit"/></Grid>
                                         <Grid item xs ={8}><div>9562.47<br />Sell</div></Grid>
                                 </Grid>
                             </Button>
                         </Grid>
-                        <Grid item xs={2} align="center">
+                        <Grid item xs={2} align="center" className={classes.middleLine}>
                             <span style={{ fontSize: "10px", textAlign: "center", marginLeft: "4px" }}>18.5</span>
                         </Grid>
-                        <Grid item xs={5} style={{ minHeight: '5vh', maxWidth: '30%', margin : 3 }}>
+                        <Grid item xs={5} className={classes.middleLine}>
                             <Button size="small" 
                                     style={{
                                         borderRadius: 5,

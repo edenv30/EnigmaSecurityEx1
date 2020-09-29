@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { InputBase } from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,22 +16,37 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.primary.light,
         height: "6vh",
         padding: theme.spacing(1),
-        fontSize: 10
+        
+        [theme.breakpoints.up('xs')]: {
+            direction: "column",
+            justify: 'flex-start',
+            fontSize: 6,
+        },
+        [theme.breakpoints.up('md')]: {
+            direction: "row",
+            justify: "center",
+            fontSize: 8,
+        },
+        [theme.breakpoints.up('lg')]: {
+          direction: "row",
+          justify: "center",
+          fontSize: 10,
+        },
     }
 }))
 
-const InputField = ({textField, textId }) => {
+const InputField = ({textField }) => {
 
     const classes = useStyles();
 
     return (
-        <div>
+        <Grid xs>
             <InputBase 
                 className={classes.inputBase}
                 placeholder={textField}
                 variant="outlined"
             />
-        </div>
+        </Grid>
     )
 }
 

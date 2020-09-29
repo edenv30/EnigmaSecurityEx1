@@ -9,17 +9,46 @@ import Input from '@material-ui/core/Input';
 
 const styles = theme => ({
   root: {
-    // display: "flex",
-    // flexWrap: "wrap",
     color: theme.palette.primary.light,
     border: `0.2px solid ${theme.palette.primary.light}`,
     margin: theme.spacing(1),
+    
+    [theme.breakpoints.up('xs')]: {
+      border: `0.1px solid ${theme.palette.primary.light}`,
+      maxWidth: '60%', 
+  },
+  [theme.breakpoints.up('md')]: {
+    border: `0.2px solid ${theme.palette.primary.light}`,
+      direction: "row",
+      justify: "center",
+      maxWidth: '80%', 
+  },
+  [theme.breakpoints.up('lg')]: {
+    border: `0.3px solid ${theme.palette.primary.light}`,
+    direction: "row",
+    justify: "center",
+    maxWidth: '100%', 
+
+  },
   },
   textField: {
-    // flexBasis: 150,
     color: theme.palette.primary.light,
+    [theme.breakpoints.up('xs')]: {
+      fontSize: 4,
+      // textAlign: 'flex-start',
+      direction: "column",
+      // justify: 'flex-start'
+  },
+  [theme.breakpoints.up('md')]: {
+      fontSize: 6,
+      direction: "row",
+      justify: "center"
+  },
+  [theme.breakpoints.up('lg')]: {
     fontSize: 10,
     textAlign: 'center'
+
+  },
   }
 });
 
